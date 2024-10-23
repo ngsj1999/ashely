@@ -1,0 +1,602 @@
+@charset "UTF-8";
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        img{vertical-align: top;}
+        a{color: white; text-decoration: none;}
+        
+        .clearFix:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        body{
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        #header{
+            width: 100%; height: 143px;
+            font-size: 18pt;
+            font-weight: bold;
+            background-color: #2147ff;
+            color: aliceblue;
+            overflow: hidden;
+            position: absolute;
+            z-index: 30;
+        }
+
+        #header .hd .gnb .brd .point{
+            color: yellow;
+        }
+
+        #header .brd .console{
+            color: #cacaca;
+        }
+
+        #header .hd{
+            width: 1500px;
+            margin: 0 auto;
+        }
+
+        #header .hd .logo img{
+            margin-top: 10px;
+        }
+        
+        #header .gnb{
+            /* transition: all 5s; */
+            height: 163px;
+            float: right;
+            /* border: 1px solid rebeccapurple; */
+            background-color: #2147ff;
+            position: absolute;
+            left: 40%; top: 0;
+            z-index: 50;
+        }
+
+        #header .gnb>li a:hover{
+            color: #ff2e2e;
+            text-decoration-line: underline;
+        }
+
+        #header .gnb>li{
+            float: left;
+            height: 143px;
+            padding: 0 45px;
+            line-height: 143px;
+            position: relative;
+            z-index: -1;
+        }
+        
+        #header .gnb>li .sub{
+            display: none;
+            position: absolute;
+            left: 10px;
+            top: 120px;
+            width: 150px;
+            font-size: 14pt;
+            line-height: 40px;
+            text-align: center;
+            z-index: -1;
+        }
+
+
+        #header .gnb>li:hover:before{
+            content: "";
+            display: block;
+            width: 0px; height: 0px;
+            position: absolute;
+            left: 20px; top: 64px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 15px solid #ff2e2e;
+            border-right: 10px solid transparent;
+        }
+
+        #header .gnb>li .sub a{
+        text-decoration: none;}
+
+        #header .gnb>li:hover .sub{display: block;}
+
+        #section .story .brand_story h1{
+            color: #ff2e2e;
+            font-size: 44.8px;
+        }
+
+        #section .story .brand_story h1{
+            font-size: 50px;
+            min-width:11px;
+            white-space: nowrap;
+            margin: 0;
+            position: absolute;
+            color: transparent;
+            left: 11%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #section .story .brand_story h1::before {
+            content: "BRAND STORY";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            color: #ff2e2e;
+            overflow: hidden;
+            border-right: 1px solid #000;
+            animation: typing 5s steps(31) infinite;
+        }
+        
+        @keyframes typing{
+            0% {
+            width: 0%;
+            }
+            50% {
+            width: 100%;
+            }
+            100% {
+            width: 0%;
+            }
+        }
+
+        #section .story .brand_story{
+            width: 600px; 
+            float: left;
+            line-height: 48px;
+            margin-top: 250px;
+        }
+
+        #section .story {
+            width: 1600px; height: 1578px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #section .story .open{
+            width: 830px;
+            float: right;
+            margin-left: 100px;
+            margin-top: 250px;
+        }
+
+        #section .story .close{
+            position: absolute;
+            right: 50px; bottom: 50px;
+        }
+
+        #section .story .story_intro{
+            font-size: 20pt;
+            height: 510px;
+            padding-top: 50px;
+            position: relative;
+            letter-spacing: -2px;
+            font-weight: 200;
+        }
+        #section .q_menu{
+            background-color: #8e9de3;
+            width: 100px; height: 300px;
+            position: fixed;
+            top: 100px; right: 0px;
+            padding-top: 20px;
+            border-radius: 50px 0 0 50px;
+            z-index: 100;
+            box-shadow: -2px 0px 5px 0px #00000053;
+            animation: move 2s infinite;
+        }
+
+        @keyframes move{
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(10px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+
+        #section .q_menu>div span{font-size: 3em;}
+        
+        #section .q_menu>div{text-align: center;}
+        
+        #section .q_menu>div:nth-child(2){margin:20px 0;}
+        
+        #section .q_menu>div:hover span{color: #5e63ff;}
+        
+        #section .story h2{
+            font-size: 44.8px;
+            padding-top: 50px;
+            font-weight: 900;
+        }
+
+        #section .story span{
+            font-weight: 350;
+        }
+        
+        #section .story .box{
+            width: 1650px; height: 320px;
+            font-size: 150pt;
+            position: absolute;
+            transform: rotate(90deg);
+            top: 750px; left: -720px;
+            color: rgba(250, 128, 114, 0.382);
+            z-index: -1;
+        }
+
+        #section .story .box1{
+            width: 1650px; height: 320px;
+            font-size: 150pt;
+            position: absolute;
+            transform: rotate(90deg);
+            top: 750px; left: -780px;
+            color: rgba(31, 29, 29, 0.072);
+            z-index: -1;
+        }
+        
+        #section .drive{
+            background-image: url(images/brand11.jpg);
+            height: 650px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0 auto;
+        }
+
+        #section .concept {width: 100%;}
+
+        #section .concept .red {
+            width: 100%; height: 1120px;
+            background-image: url(images/brand1.png);
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        #section .concept .red .brand_concept{
+            width: 1500px;
+            margin: 0 auto;     
+        }
+
+        #section .concept .red .concept_intro .shrimp{
+            left: 55%; top: 5%;
+            position: absolute;
+            animation: drink 1s linear;
+        }
+
+        #section .concept .brand_concept .brand_concept2 .coffee{
+            top: 50%; left: 15%;
+            position: absolute;
+            animation: food 1s linear 0.2s;
+        }
+
+        @keyframes drink{
+            0%{left: 150%}
+            50%{left: 100%}
+            100%{left: 55%}
+        }
+        @keyframes food{
+            0%{left: -50%}
+            50%{left:-15%}
+            100%{left: 15%}
+        }
+
+        #section .concept .red .brand_concept .concept_intro .retro{
+            font-size: 44.8px;
+            line-height: 30px;
+            margin-top: 50px;
+            letter-spacing: -2px;
+            font-weight: 900;
+        }
+
+        #section .concept .red .brand_concept .concept_intro .base{
+            font-size: 44.8px;
+            line-height: 30px;
+            letter-spacing: -2px;
+            margin-top: 40px;
+            font-weight: 900;
+        }
+
+        #section .concept .red .brand_concept h1{
+        color: #fff;
+        font-size: 70px;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-family: "Josefin Sans", sans-serif;
+        background: linear-gradient(to right,rgb(255, 255, 255) 10%, #d9dbe465 50%, #ffffff 60%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        margin-top: 50px;
+        }
+
+
+        @keyframes textclip {
+        to {
+        background-position: 200% center;
+        }
+        }
+
+        #section .concept .red li p{
+            font-size: 22px;
+            margin-top: 20px;
+            font-weight: 300;
+        }
+
+        #section .concept span{font-weight: 400;}
+
+        #section .concept .brand_concept .brand_concept2 .anytime{
+            margin-left: 800px;
+            font-size: 44.8px;
+            line-height: 40px;
+            letter-spacing: -2px;
+            margin-top: 100px;
+            font-weight: 900;
+        }
+
+        #section .concept .brand_concept .brand_concept2 .anywhere{
+            line-height: 40px;
+            font-size: 44.8px;
+            margin-left: 800px;
+            letter-spacing: -2px;
+            margin-top: 20px;
+            font-weight: 900;
+        }
+
+        #section .concept .steak{
+            width: 100%; 
+            margin: 0 auto;
+        }
+
+        #section .concept .blue{
+            width: 100%; height: 1045px;
+            background-image: url(images/brand2.png);
+            background-repeat: no-repeat;
+        }
+
+        #section .concept .blue .promise{
+            width: 1500px; height: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #section .concept .blue .promise .brand_concept3{
+            font-size: 22px;
+            line-height: 35px;
+            margin-top: 50px;
+            letter-spacing: -2px;
+        }
+
+        #section .concept .blue .promise .brand_concept3 .with{
+            font-size: 44.8px;
+            line-height: 100px;
+            font-weight: 900;
+        }
+
+        #section .concept .blue .promise .brand_concept3 .with p{
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 40px;
+        }
+
+        #section .concept .blue .brand_concept3 .photo2{
+            position: absolute;
+            right: 50%; bottom: 10%;
+            animation:do 3s linear infinite;
+        }
+
+        @keyframes do{
+            0%{bottom: 10%}
+            50%{bottom: 13%}
+            100%{bottom: 10%}
+        }
+
+        #section .concept .blue .brand_concept3 .photo{
+            position: absolute;
+            right: 5%; bottom: 10%;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate{
+            0%{transform: rotate(0deg);}
+            50%{transform: rotate(2deg);}
+        }
+
+        #section .concept .fries{
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        #section .interior{
+            width: 1600px;
+            margin: 0 auto;   
+        }
+
+        #section .interior .brand_interior .queens{
+            font-size: 44.8px;
+            font-weight: 900;
+            box-sizing: border-box;
+            line-height: 80px;
+        }
+
+        #section .interior .brand_interior .space{
+            font-size: 22px;
+            float: left;
+        }
+
+        #section .interior .brand_interior .earth{
+            position: relative;
+            width: 1500px; height: 800px;
+            float: left;
+        }
+
+        #section .interior .brand_interior span{font-weight: 400;}
+
+        #section .interior .brand_interior .mood{
+            float: left; 
+            line-height: 38px;
+            margin-top: 100px;
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: -2px;
+        }
+
+        #section .interior .brand_interior .effect .flow{
+            margin-left: 250px;
+            padding-left: 40px;
+        }
+
+        #section .interior .brand_interior .table{
+            margin-bottom: 25px;
+            float: right;
+            margin-left: 305px;
+            margin-top: 100px;
+            
+        }
+        #section .interior .brand_interior .floor{
+            float: right;
+            margin-right: 10px;
+        }
+
+        #section .interior .brand_interior .store{float: left;}
+
+        #section .interior .brand_interior .effect{
+            color: #fff;
+            height: 250px; width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #section .interior .brand_interior .effect .flow{
+            background: 50% 100% / 50% 50% no-repeat
+            radial-gradient(ellipse at bottom, rgba(81, 101, 115, 0.778), transparent, rgb(67, 46, 226));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 200px;
+            animation: reveal 3000ms ease-in-out forwards 300ms,
+            glow 3000ms linear infinite 2000ms;
+            margin-left: 550px;
+        }
+        
+        @keyframes reveal {
+            80%{letter-spacing: 8px;}
+            100% {background-size: 300% 300%;}
+        }
+        @keyframes glow {
+            40% {text-shadow: 0 0 8px #5e63ff;}
+        }
+        
+        #section .interior .interior2{
+            width: 1500px; height: 927px;
+            margin-bottom: 17px;
+            margin: 0;
+            display: grid;
+            min-height: 100vh;
+            grid-auto-flow :column;
+            place-content: center;
+            gap: 40px;
+        }
+        #section .interior .interior2 .picture{
+            float: left;
+            margin-right: 17px;
+            --_g: 10% /45% 45% no-repeat linear-gradient(#000 0 0);
+            --m:
+            left   var(--_i,0%) top    var(--_g),
+            bottom var(--_i,0%) left   var(--_g),
+            top    var(--_i,0%) right  var(--_g),
+            right  var(--_i,0%) bottom var(--_g);
+            -webkit-mask: var(--m);
+                    mask: var(--m);
+            filter: grayscale(0.5);
+            transition: .3s linear;
+            cursor: pointer;
+        }
+        #section .interior .interior2 .picture:hover{
+            --_i: 10%;
+            filter: grayscale(0);
+        }
+        #section .interior .interior2 .light{
+            float: left;
+        }
+        #section .interior .interior2 .kiss{
+            float: left;
+            margin-bottom: 17px;
+            --_g: 10% /45% 45% no-repeat linear-gradient(#000 0 0);
+            --m:
+            left   var(--_i,0%) top    var(--_g),
+            bottom var(--_i,0%) left   var(--_g),
+            top    var(--_i,0%) right  var(--_g),
+            right  var(--_i,0%) bottom var(--_g);
+            -webkit-mask: var(--m);
+                    mask: var(--m);
+            filter: grayscale(0.5);
+            transition: .3s linear;
+            cursor: pointer;
+            
+        }
+        #section .interior .interior2 .kiss:hover{
+            --_i: 10%;
+            filter: grayscale(0);
+        }
+        
+        #section .interior .interior2 .kitchen{
+            margin-right: 17px;
+            
+        }
+        #section .interior .interior2 .cold{
+            float: left;
+            margin-right: 17px;
+        }
+        #section .interior .interior2 .hot{
+            float: left;
+        }
+            
+        #footer{
+            width: 100%; height: 370px;
+            background-color: #2147ff;
+            font-size: 12pt;
+            color: #cacaca;
+            text-align: center;
+            line-height: 35px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        #footer .footcolor img{margin-top: 20px;}
+        #footer .footcolor .finish .homepage{margin-top: 30px;
+        margin-left: 120px;}
+            
+        #footer .footcolor .finish .homepage .e_land{
+            border: 2px solid #cacaca;
+            width: 200px; height: 45px;
+            position: absolute;
+            margin-right: 100px;
+            display: inline-block;
+            line-height: 47px;
+            left: 39%; top: 69%;
+            cursor: pointer;
+        }
+        #footer .footcolor .finish .homepage .info{
+            
+            width: 200px; height: 45px;
+            border: 2px solid #cacaca;
+            margin-right: 120px;
+            position: absolute;
+            line-height: 47px;
+            left: 50.5%; top: 69%;
+            cursor: pointer;
+        }
+        #footer .footcolor2{
+            width: 100%; height: 59px;
+            margin-top: 70px;
+            color: #cacaca;
+            background-color: #ff2e2e;
+            line-height: 59px;
+        }
